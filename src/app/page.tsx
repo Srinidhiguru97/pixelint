@@ -1,29 +1,29 @@
 import Navbar from "@/components/Navbar";
-import BackgroundEffects from "@/components/BackgroundEffects";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
 import About from "@/components/About";
-import ComingSoon from "@/components/ComingSoon";
+import Services from "@/components/Services";
+import Process from "@/components/Process";
+import WhyUs from "@/components/WhyUs";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#08090D] text-slate-100 flex flex-col justify-between selection:bg-[#397BFF]/30 selection:text-white">
-      {/* Background ambient lighting and subtle grid */}
-      <BackgroundEffects />
-
-      {/* Sticky top navigation bar */}
+    <div className="relative min-h-screen bg-black text-[#E2E8F0] selection:bg-white selection:text-black">
+      {/* Sticky Editorial Header */}
       <Navbar />
 
-      {/* Main Page Flow */}
-      <main className="relative z-10 flex-1">
+      {/* Main Page Content Flow */}
+      <main>
         <Hero />
-        <Services />
         <About />
-        <ComingSoon />
+        <Services />
+        <Process />
+        <WhyUs />
+        <Contact />
       </main>
 
-      {/* Global studio footer */}
+      {/* Minimal Footer */}
       <Footer />
     </div>
   );

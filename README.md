@@ -1,72 +1,94 @@
-# PIXELINT — Coming Soon Website
+# PIXELINT — Independent Digital Design & Technology Studio
 
-> Independent Digital Design & Technology Studio  
-> *"Beyond the ordinary. Into what's next."*
+> *"Ideas deserve better execution."*  
+> A product-minded creative studio for brands, businesses and ambitious founders.
 
-A premium, futuristic Coming Soon landing page for **PIXELINT**, a digital design and technology studio built for what's next.
+Redesigned in high fidelity inspired by the visual design language, section sequencing, editorial typography, and minimalist aesthetic of [WINTR](https://wintr.gr/).
 
 ---
 
-## 🎨 Visual Identity
+## 🏛️ Design Language & Aesthetics
 
-- **Primary Background**: Deep Black (`#08090D`)
-- **Secondary Background**: Dark Charcoal (`#11131A`)
-- **Primary Accent**: Electric Blue (`#397BFF`)
-- **Secondary Accent**: Subtle Violet (`#875BFF`)
-- **Typography**: Modern geometric sans-serif (*Space Grotesk*)
-- **Aesthetic**: Glassmorphism, subtle gradients, soft ambient lighting, and fine depth grid.
+- **Background**: Deep Pure Black (`#000000`)
+- **Card Surfaces**: Technical Charcoal (`#0E0F14`) with hairline borders (`rgba(255, 255, 255, 0.08)`) and subtle corner registration accents
+- **Typography Hierarchy**:
+  - Headings & Interface: **Urbanist** (Geometric modern sans-serif)
+  - Editorial Accents & Emphasis: **Arapey** (High-contrast editorial serif italic)
+  - Telemetry & Technical Tags: **Space Grotesk** (Monospace)
+- **Signature Section Badges**: 4-point geometric cross/star pill badges (`✦ ABOUT PIXELINT`, `✦ SERVICES & ADD-ONS`, `✦ HOW IT WORKS // TIMELINE`, `✦ WHY WE EXIST`, `✦ LET'S CONNECT`)
+- **No generic AI clutter**: Replaced glowing neon orbs and particle fields with architectural geometric wireframes, clean editorial rhythm, and generous whitespace.
 
 ---
 
 ## ⚡ Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Animations**: [Motion](https://motion.dev/) (Framer Motion)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Canvas Centerpiece**: Lightweight 60fps HTML5 Canvas 3D particle constellation & wireframe geodesic core (zero heavy 3D engine bundles, full `prefers-reduced-motion` compliance).
-
----
-
-## 🚀 Getting Started
-
-### 1. Install Dependencies
-```bash
-npm install
-```
-
-### 2. Run the Development Server
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to view the website.
-
-### 3. Production Build & Check
-```bash
-npm run build
-npm run lint
-npm run start
-```
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4 + `@tailwindcss/postcss`
+- **Animations**: Motion (`motion/react`)
+- **Icons**: Lucide React
 
 ---
 
 ## 📐 Sections Implemented
 
-1. **Top Navigation**: PIXELINT wordmark, live studio indicator pill (`A NEW DIGITAL STUDIO IS EMERGING`), minimal menu (`About`, `Services`, `Contact`), and responsive mobile drawer.
+1. **Header & Navigation**:
+   - `PIXELINT` uppercase tracking wordmark
+   - Links: `About`, `Services`, `Process`, `Contact`
+   - High-contrast `Let's Talk` pill CTA with arrow micro-interaction
+   - Mobile responsive drawer
 2. **Hero Section**:
-   - Eyebrow: `INDEPENDENT DIGITAL DESIGN & TECHNOLOGY STUDIO`
-   - Headline: `Beyond the ordinary. Into what's next.`
-   - Supporting text & dual CTAs (`Let's Talk`, `Coming Soon`)
-   - Launch indicator: `OUR JOURNEY STARTS SOON`
-3. **Hero Visual Centerpiece**: Interactive 3D abstract orb with electric blue/violet lighting, particle field, perspective depth grid, mouse parallax, and ambient rotation.
-4. **Services Section**: Headline `Where creativity meets technology`, featuring the 5 studio capabilities:
-   - Digital Product Design
-   - UI/UX & Experience Design
-   - Brand Identity & Strategy
-   - Web Development
-   - AI-powered Digital Experiences
-5. **About Section**: Headline `Small studio. Big ideas.` and studio philosophy pillars (Disciplined Craft, Experimental Momentum, Intentional Partnership).
-6. **Coming Soon Section**: Headline `Something new is taking shape.`, `Start a Conversation` mailto CTA, and interactive early access notification form.
-7. **Footer**: PIXELINT wordmark, studio tagline, dynamic copyright year, and conditional social links.
+   - Brand Intro: `PIXELINT — INDEPENDENT DIGITAL DESIGN & TECHNOLOGY STUDIO`
+   - Headline: `Ideas deserve better execution.` (with editorial italic serif)
+   - Supporting statement: *"We transform ambitious ideas into meaningful digital experiences through design, technology and innovation."*
+   - Positioning: *"A product-minded creative studio for brands, businesses and ambitious founders."*
+   - Dual CTAs: `Let's Connect` & `Explore Our Studio` + downward scroll trigger
+   - Right: Bespoke `EditorialHeroGraphic` architectural geometric sculpture with telemetry metadata
+3. **Introduction / About Section**:
+   - Small badge: `✦ ABOUT PIXELINT`
+   - Large statement: *"A digital studio built for ideas that move the world forward."*
+   - Description: *"PixelInt combines strategic thinking, thoughtful design and modern technology to create digital products, brands and experiences that make a difference."*
+   - Supporting ethos: *"One studio. Multiple disciplines. Meaningful outcomes."*
+   - 3 highlight cards: *Strategy & Direction*, *Design Architecture*, *Engineering & Innovation*
+4. **Services Section**:
+   - Heading: `What we bring to the table.`
+   - 6 minimal cards with corner accents, numbers `01 —` to `06 —`, descriptions, and hover interactions:
+     1. Digital Product Design
+     2. UI/UX Design
+     3. Brand Identity
+     4. Web Development
+     5. AI Experiences
+     6. Creative Technology
+5. **How We Work (Timeline & Process)**:
+   - Heading: `From first thought to final experience.`
+   - 4 numbered stages with clear hierarchy and key outcome checklists:
+     - STAGE 01 — Discover
+     - STAGE 02 — Define
+     - STAGE 03 — Design & Build
+     - STAGE 04 — Launch & Evolve
+6. **Why PIXELINT**:
+   - Heading: `Good ideas deserve more than ordinary execution.`
+   - Supporting paragraph on bridging strategy, design, and technology
+   - 3 editorial cards:
+     1. *Design without direction is decoration.*
+     2. *Technology should create possibilities.*
+     3. *Experiences should create impact.*
+7. **Contact Section (Let's Connect)**:
+   - Heading: `Have something in mind?`
+   - Description & direct studio email context
+   - Clean contact form (Name, Email, Phone, Company/Brand, Project Type, Message)
+   - Form validation & honest client feedback (formats message and provides one-click email client launch + copy inquiry)
+8. **Footer**:
+   - `PIXELINT` wordmark, studio tagline, navigation links, GitHub link, dynamic copyright year (`© 2026`).
+
+---
+
+## 🚀 Running Locally
+
+```bash
+npm run dev
+# or
+npm run build && npm run start
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to review the website.

@@ -2,25 +2,25 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#08090D",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
 
 export const metadata: Metadata = {
-  title: "PIXELINT — Digital Design & Technology Studio",
+  title: "PIXELINT — Independent Digital Design & Technology Studio",
   description:
-    "Independent digital design & technology studio. We transform ambitious ideas into meaningful digital experiences through design, technology and innovation.",
+    "Ideas deserve better execution. We transform ambitious ideas into meaningful digital experiences through design, technology and innovation.",
   keywords: [
     "PIXELINT",
     "Digital Design Studio",
     "Creative Technology",
+    "Product Design",
     "UI/UX Design",
-    "Web Development",
-    "AI Digital Experiences",
     "Brand Identity",
-    "Next.js Studio",
+    "Web Development",
+    "AI Experiences",
   ],
   authors: [{ name: "PIXELINT" }],
   creator: "PIXELINT",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "PIXELINT — Beyond the ordinary. Into what's next.",
+    title: "PIXELINT — Ideas deserve better execution.",
     description:
-      "Independent digital design & technology studio transforming ambitious ideas into meaningful digital experiences.",
+      "A product-minded creative studio for brands, businesses and ambitious founders.",
     url: "https://pixelint.studio",
     siteName: "PIXELINT",
     locale: "en_US",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PIXELINT — Digital Design & Technology Studio",
+    title: "PIXELINT — Independent Digital Design & Technology Studio",
     description:
-      "Beyond the ordinary. Into what's next. Independent digital design & technology studio.",
+      "Ideas deserve better execution. Digital design, brand strategy and creative technology.",
   },
   robots: {
     index: true,
@@ -59,7 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className="min-h-screen bg-[#08090D] text-slate-100 antialiased selection:bg-[#397BFF]/30 selection:text-white">
+      <body className="min-h-screen bg-black text-[#E2E8F0] antialiased selection:bg-white selection:text-black">
         {children}
       </body>
     </html>

@@ -2,118 +2,125 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { Target, Zap, ShieldCheck } from "lucide-react";
+import SectionBadge from "./SectionBadge";
+import { ArrowUpRight } from "lucide-react";
 
-const pillars = [
+const studioMetrics = [
   {
-    icon: Target,
-    title: "Disciplined Craft",
-    description:
-      "We obsess over every detail, from micro-typography and frame rates to system architecture and state management.",
+    index: "01",
+    tag: "Core Focus",
+    title: "Strategy & Direction",
+    description: "Aligning product roadmaps, user mental models and business intent from day zero.",
   },
   {
-    icon: Zap,
-    title: "Experimental Momentum",
-    description:
-      "We embrace emerging paradigms—combining modern frameworks, machine intelligence and spatial UI to discover the unexpected.",
+    index: "02",
+    tag: "Aesthetic Standard",
+    title: "Design Architecture",
+    description: "Spatial systems, interaction design and bespoke typography built for lasting resonance.",
   },
   {
-    icon: ShieldCheck,
-    title: "Intentional Partnership",
-    description:
-      "Operating as an agile, senior-only studio means direct collaboration, zero agency bureaucracy and uncompromising speed.",
+    index: "03",
+    tag: "Technical Rigor",
+    title: "Engineering & Innovation",
+    description: "High-performance frontend architecture, modern APIs and production AI integration.",
   },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Main Editorial Text */}
+    <section id="about" className="relative py-28 sm:py-36 bg-[#000000] border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Section Pill Badge */}
+        <div className="mb-8">
+          <SectionBadge label="ABOUT PIXELINT" />
+        </div>
+
+        {/* Main Statement (Large Editorial Headline) */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl mb-16 sm:mb-20"
+        >
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
+            A digital studio built for ideas that{" "}
+            <span className="font-serif italic font-normal text-slate-200">
+              move the world forward.
+            </span>
+          </h2>
+        </motion.div>
+
+        {/* Two-Column Editorial Text Block */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-16 pb-16 sm:pb-24 border-b border-white/10">
           <motion.div
-            className="lg:col-span-6"
+            className="lg:col-span-7"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/10 text-xs font-mono uppercase tracking-widest text-[#875BFF] mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#875BFF]" />
-              <span>Studio Ethos</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-8 leading-tight">
-              Small studio.{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#875BFF] via-[#397BFF] to-white">
-                Big ideas.
-              </span>
-            </h2>
-
-            <p className="text-lg sm:text-xl text-slate-200 leading-relaxed font-light mb-8">
-              PIXELINT is a creative technology studio focused on building digital products, intelligent experiences and distinctive brands. We combine design thinking, technology and experimentation to turn ideas into impact.
+            <p className="text-xl sm:text-2xl text-slate-200 font-light leading-relaxed">
+              PixelInt combines strategic thinking, thoughtful design and modern technology to create digital products, brands and experiences that make a difference.
             </p>
-
-            <div className="p-6 rounded-2xl bg-[#11131A]/80 border border-white/10 backdrop-blur-md">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div className="border-r border-white/10 pr-2">
-                  <div className="font-mono text-xl sm:text-2xl font-bold text-white">01</div>
-                  <div className="text-[11px] font-mono tracking-wider text-slate-400 uppercase mt-1">
-                    Focused Model
-                  </div>
-                </div>
-                <div className="border-r border-white/10 px-2">
-                  <div className="font-mono text-xl sm:text-2xl font-bold text-[#397BFF]">AI+UX</div>
-                  <div className="text-[11px] font-mono tracking-wider text-slate-400 uppercase mt-1">
-                    Modern Stack
-                  </div>
-                </div>
-                <div className="pl-2">
-                  <div className="font-mono text-xl sm:text-2xl font-bold text-[#875BFF]">GLOBAL</div>
-                  <div className="text-[11px] font-mono tracking-wider text-slate-400 uppercase mt-1">
-                    Reach
-                  </div>
-                </div>
-              </div>
-            </div>
           </motion.div>
 
-          {/* Pillars Column */}
-          <div className="lg:col-span-6 space-y-4">
-            {pillars.map((pillar, idx) => {
-              const Icon = pillar.icon;
-              return (
-                <motion.div
-                  key={pillar.title}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.15 }}
-                  className="group p-6 sm:p-7 rounded-2xl bg-[#11131A]/60 border border-white/10 hover:border-[#875BFF]/40 hover:bg-[#161824]/80 transition-all duration-300"
-                >
-                  <div className="flex items-start gap-4 sm:gap-5">
-                    <div className="w-12 h-12 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-slate-200 group-hover:text-white group-hover:bg-[#875BFF]/20 group-hover:border-[#875BFF]/40 transition-all duration-300 shrink-0">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-white transition-colors">
-                        {pillar.title}
-                      </h3>
-                      <p className="text-sm text-slate-400 leading-relaxed">
-                        {pillar.description}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+          <motion.div
+            className="lg:col-span-5 flex flex-col justify-between"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+          >
+            <div className="p-6 rounded-2xl bg-[#0E0F14] border border-white/10">
+              <div className="text-xs font-mono tracking-widest uppercase text-slate-400 mb-2">
+                STUDIO ETHOS
+              </div>
+              <p className="text-base text-white font-medium leading-normal">
+                One studio. Multiple disciplines. Meaningful outcomes.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* 3 Editorial Highlight Cards (Inspired by WINTR) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-16">
+          {studioMetrics.map((item, index) => (
+            <motion.div
+              key={item.index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group relative p-8 rounded-2xl bg-[#0E0F14] border border-white/10 hover:border-white/25 transition-all duration-300 flex flex-col justify-between min-h-[220px]"
+            >
+              {/* Corner accent marker matching WINTR */}
+              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-white/30 rounded-tr-xl" />
+
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-xs text-slate-400 tracking-wider">
+                    {`${item.index} //`}
+                  </span>
+                  <span className="text-[11px] font-mono tracking-widest uppercase text-slate-400">
+                    {item.tag}
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-white tracking-tight mb-3">
+                  {item.title}
+                </h3>
+              </div>
+
+              <div className="pt-4 border-t border-white/5 flex items-center justify-between">
+                <p className="text-sm text-slate-400 font-normal leading-relaxed">
+                  {item.description}
+                </p>
+                <ArrowUpRight className="w-4 h-4 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-2" />
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
-
-      {/* Subtle Bottom Section Divider */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
     </section>
   );
 }
-
